@@ -1,7 +1,10 @@
+import { Button } from "@/components/button"
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <div className="text-amber-500">Hello World</div>
+      <Button/>
     </main>
-  );
+  )
 }
