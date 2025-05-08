@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeCraft Summit 2025
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+**CodeCraft Summit 2025** is a Next.js web application for event registration, referral, and ranking. Users can register for the event, invite others, and compete for prizes based on successful referrals.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Event Landing Page:** Details about the event, including date, time, and format.
+- **Registration Form:** Users can sign up with name and email, with validation.
+- **Invite & Referral System:** After registering, users receive a unique invite link to share.
+- **Referral Stats:** Users can track link accesses, successful referrals, and their ranking.
+- **Leaderboard:** Displays the top referrers and their invite counts.
+- **Responsive Design:** Optimized for both desktop and mobile.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-## Learn More
+- **Framework:** [Next.js 15](https://nextjs.org/)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Form Validation:** React Hook Form + Zod
+- **Icons:** Lucide React
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/(home)/page.tsx` — Event landing and registration form
+- `src/app/invite/page.tsx` — Invite and referral dashboard
+- `src/app/invite/ranking.tsx` — Leaderboard component
+- `src/app/invite/stats.tsx` — Referral statistics
+- `src/app/invite/invite-link-input.tsx` — Copy/share invite link
+- `src/components/` — Reusable UI components
+- `src/assets/` — Images and SVGs
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Event Details:** Update event info in `src/app/(home)/page.tsx`.
+- **Referral Logic:** The current implementation uses static data; integrate with a backend for real tracking.
